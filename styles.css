@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Cambiado de height a min-height */
     background-color: #f0f0f0;
     margin: 0;
     background-image: url('background.jpg');
@@ -29,19 +29,19 @@ h1 {
 .game-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 #word-search-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    grid-template-columns: repeat(10, 30px); /* Asegura 10 columnas de 30px */
     gap: 2px;
     margin-bottom: 20px;
 }
 
 .cell {
-    width: 100%;
+    width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
@@ -97,14 +97,14 @@ h1 {
 }
 
 /* Media query para pantallas más pequeñas */
-@media (min-width: 600px) {
+@media (max-width: 600px) {
     .game-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #word-search-container {
-        grid-template-columns: repeat(10, 30px);
+        grid-template-columns: repeat(10, 1fr); /* Cambia a columnas flexibles */
     }
 }
