@@ -13,10 +13,9 @@ body {
 
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    background-color: transparent; /* Fondo transparente */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 1200px;
 }
@@ -46,7 +45,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 255, 0.7); /* Fondo azul más vivo y semi-transparente */
     color: white;
     cursor: pointer;
     user-select: none;
@@ -54,11 +53,11 @@ h1 {
 }
 
 .cell.selected {
-    background-color: #ff6347;
+    background-color: rgba(255, 99, 71, 0.7); /* Fondo semi-transparente */
 }
 
 .cell.correct {
-    background-color: #28a745;
+    background-color: rgba(40, 167, 69, 0.7); /* Fondo semi-transparente */
 }
 
 #words-container {
