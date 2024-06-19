@@ -17,6 +17,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
 }
 
 h1 {
@@ -26,20 +28,20 @@ h1 {
 
 .game-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 #word-search-container {
     display: grid;
-    grid-template-columns: repeat(10, 30px);
-    grid-template-rows: repeat(10, 30px);
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
     gap: 2px;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .cell {
-    width: 30px;
+    width: 100%;
     height: 30px;
     display: flex;
     justify-content: center;
@@ -61,6 +63,7 @@ h1 {
 
 #words-container {
     text-align: left;
+    margin-top: 20px;
 }
 
 #word-list {
@@ -91,4 +94,17 @@ h1 {
 
 .btn:hover {
     background-color: #218838;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (min-width: 600px) {
+    .game-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #word-search-container {
+        grid-template-columns: repeat(10, 30px);
+    }
 }
