@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#word-search-container {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+    margin-right: 20px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+}
+
+.cell.selected {
+    background-color: #ff6347;
+}
+
+.cell.correct {
+    background-color: #28a745;
+}
+
+#words-container {
+    text-align: left;
+}
+
+#word-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#word-list li {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#word-list li.found {
+    text-decoration: line-through;
+    color: #28a745;
+}
+
+.btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
